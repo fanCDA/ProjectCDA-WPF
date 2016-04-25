@@ -22,13 +22,15 @@
         <localData:DataSource />
     </Window.DataContext>
 
-    <Grid>
-        <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}" ItemTemplate="{StaticResource TwoPagesTemplate}">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <UniformGrid Columns="8" />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Border Background="LightGray" BorderBrush="Red" BorderThickness="1">
+            <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}" ItemTemplate="{StaticResource TwoPagesTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="8" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Border>
+    </ScrollViewer>
 </Window>
