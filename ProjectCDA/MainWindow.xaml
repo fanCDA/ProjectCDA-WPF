@@ -3,16 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:ProjectCDA"
         xmlns:localData="clr-namespace:ProjectCDA.Data"
         mc:Ignorable="d"
         Title="MainWindow">
+
+    <Window.Resources>
+        <sys:Double x:Key="ItemHeight">230</sys:Double>
+        
+        <DataTemplate x:Key="TwoPagesTemplate">
+            <Border Height="{StaticResource ItemHeight}" Margin="5" Background="LightYellow" BorderBrush="Green" BorderThickness="1">
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
 
     <Window.DataContext>
         <localData:DataSource />
     </Window.DataContext>
 
     <Grid>
-        <ItemsControl ItemsSource="{Binding Schedule}" />
+        <ItemsControl ItemsSource="{Binding Schedule}" ItemTemplate="{StaticResource TwoPagesTemplate}">
+        </ItemsControl>
     </Grid>
 </Window>
