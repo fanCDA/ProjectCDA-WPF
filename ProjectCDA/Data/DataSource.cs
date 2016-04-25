@@ -52,6 +52,17 @@ namespace ProjectCDA.Data
             TmpSchedule.Add(new TwoPages());
             TmpSchedule.Add(new TwoPages());
 
+            TmpSchedule.Add(new TwoPages());
+            TmpSchedule.Add(new TwoPages());
+            TmpSchedule.Add(new TwoPages());
+            TmpSchedule.Add(new TwoPages());
+            TmpSchedule.Add(new TwoPages());
+            TmpSchedule.Add(new TwoPages());
+            TmpSchedule.Add(new TwoPages());
+            TmpSchedule.Add(new TwoPages());
+            TmpSchedule.Add(new TwoPages());
+            TmpSchedule.Add(new TwoPages());
+
             Schedule = TmpSchedule;
         }
     }
