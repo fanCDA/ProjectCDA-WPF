@@ -14,13 +14,16 @@
         
         <DataTemplate x:Key="TwoPagesTemplate">
             <Border Height="{StaticResource ItemHeight}" Margin="5" Background="LightYellow" BorderBrush="Green" BorderThickness="1">
-                <StackPanel>
-                    <Label Content="Hello!" />
-                    <Label Content="{Binding}" />
-                    <Label Content="{Binding ID}" />
-                    <Label Content="{Binding LeftPage}" />
-                    <Label Content="{Binding RightPage}" />
-                </StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" Margin="2" Background="Wheat" BorderBrush="Blue" BorderThickness="1">
+                    </Border>
+                    <Border Grid.Column="1" Margin="2" Background="Wheat" BorderBrush="Blue" BorderThickness="1">
+                    </Border>
+                </Grid>
             </Border>
         </DataTemplate>
     </Window.Resources>
