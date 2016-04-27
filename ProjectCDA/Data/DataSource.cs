@@ -36,27 +36,10 @@ namespace ProjectCDA.Data
         {
             ObservableCollection<TwoPages> TmpSchedule = new ObservableCollection<TwoPages>();
 
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
-            TmpSchedule.Add(new TwoPages());
+            for(int i=0; i<20; i++)
+            {
+                TmpSchedule.Add(new TwoPages());
+            }
 
             Schedule = TmpSchedule;
         }
