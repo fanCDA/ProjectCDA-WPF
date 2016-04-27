@@ -38,6 +38,9 @@ namespace ProjectCDA.Data
 
             for(int i=0; i<20; i++)
             {
+                TwoPages pages = new TwoPages();
+                pages.ID = i.ToString();
+                pages.RightPage = i % 5 != 3;
                 TmpSchedule.Add(new TwoPages());
             }
 
