@@ -41,7 +41,7 @@ namespace ProjectCDA.Data
                 TwoPages pages = new TwoPages();
                 pages.ID = i.ToString();
                 pages.RightPage = i % 5 != 3;
-                TmpSchedule.Add(new TwoPages());
+                TmpSchedule.Add(pages);
             }
 
             Schedule = TmpSchedule;
