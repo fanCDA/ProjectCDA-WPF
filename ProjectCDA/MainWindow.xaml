@@ -20,8 +20,12 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Border Grid.Column="0" Margin="2" Background="Wheat" BorderBrush="Blue" BorderThickness="1">
+                        <ListBox Margin="4" ItemsSource="{Binding LeftPage.BaseFields}" />
+                        <!-- <ItemsControl ItemsSource="{Binding LeftPage.BaseFields}" /> -->
                     </Border>
                     <Border Grid.Column="1" Margin="2" Background="Wheat" BorderBrush="Blue" BorderThickness="1">
+                        <!-- <ListBox Margin="4" ItemsSource="{Binding RightPage.BaseFields}" /> -->
+                        <ItemsControl ItemsSource="{Binding RightPage.BaseFields}" />
                     </Border>
                 </Grid>
             </Border>

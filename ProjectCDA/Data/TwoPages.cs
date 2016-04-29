@@ -6,11 +6,12 @@ namespace ProjectCDA.Data
     {
         public TwoPages()
         {
-            LeftPage = RightPage = true;
+            LeftPage = new SinglePage();
+            RightPage = new SinglePage();
         }
 
         public String ID { get; set; }
-        public Boolean LeftPage { get; set; }
-        public Boolean RightPage { get; set; }
+        public SinglePage LeftPage { get; set; }
+        public SinglePage RightPage { get; set; }
     }
 }
