@@ -16,16 +16,19 @@
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
         <Border Background="LightGray" BorderBrush="Red" BorderThickness="1">
             <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}">
+                
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <UserControls:TwoPagesTemplateControl />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
+                
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Columns="8" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
+                
             </ItemsControl>
         </Border>
     </ScrollViewer>
