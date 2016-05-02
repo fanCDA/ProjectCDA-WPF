@@ -4,33 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        xmlns:local="clr-namespace:ProjectCDA"
         xmlns:localData="clr-namespace:ProjectCDA.Data"
+        xmlns:UserControls="clr-namespace:ProjectCDA.UserControls"
         mc:Ignorable="d"
         Title="MainWindow">
-
-    <Window.Resources>
-        <sys:Double x:Key="ItemHeight">230</sys:Double>
-        
-        <DataTemplate x:Key="TwoPagesTemplate">
-            <Border Height="{StaticResource ItemHeight}" Margin="5" Background="LightYellow" BorderBrush="Green" BorderThickness="1">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0" Margin="2" Background="Wheat" BorderBrush="Blue" BorderThickness="1">
-                        <ListBox Margin="4" ItemsSource="{Binding LeftPage.BaseFields}" />
-                        <!-- <ItemsControl ItemsSource="{Binding LeftPage.BaseFields}" /> -->
-                    </Border>
-                    <Border Grid.Column="1" Margin="2" Background="Wheat" BorderBrush="Blue" BorderThickness="1">
-                        <!-- <ListBox Margin="4" ItemsSource="{Binding RightPage.BaseFields}" /> -->
-                        <ItemsControl ItemsSource="{Binding RightPage.BaseFields}" />
-                    </Border>
-                </Grid>
-            </Border>
-        </DataTemplate>
-    </Window.Resources>
 
     <Window.DataContext>
         <localData:DataSource />
@@ -38,7 +15,12 @@
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
         <Border Background="LightGray" BorderBrush="Red" BorderThickness="1">
-            <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}" ItemTemplate="{StaticResource TwoPagesTemplate}">
+            <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <UserControls:TwoPagesTemplateControl />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Columns="8" />
