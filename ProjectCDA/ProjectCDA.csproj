@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\Converters.cs" />
     <Compile Include="UserControls\Templates\TwoPages\TwoPagesTemplateDefault.xaml.cs">
       <DependentUpon>TwoPagesTemplateDefault.xaml</DependentUpon>
     </Compile>
