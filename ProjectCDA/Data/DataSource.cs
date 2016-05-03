@@ -36,10 +36,30 @@ namespace ProjectCDA.Data
         {
             ObservableCollection<TwoPages> TmpSchedule = new ObservableCollection<TwoPages>();
 
-            for(int i=0; i<20; i++)
+            TwoPages pages = new TwoPages();
+            pages.ID = 0;
+            pages.hasNumbers = true;
+            pages.hasHeaderField = true;
+            TmpSchedule.Add(pages);
+
+            pages = new TwoPages();
+            pages.ID = 1;
+            pages.hasNumbers = true;
+            pages.hasHeaderField = false;
+            TmpSchedule.Add(pages);
+
+            pages = new TwoPages();
+            pages.ID = 2;
+            pages.hasNumbers = false;
+            pages.hasHeaderField = false;
+            TmpSchedule.Add(pages);
+
+            for (int i=3; i<30; i++)
             {
-                TwoPages pages = new TwoPages();
-                pages.ID = i.ToString();
+                pages = new TwoPages();
+                pages.ID = i;
+                pages.hasNumbers = true;
+                pages.hasHeaderField = true;
                 TmpSchedule.Add(pages);
             }
 

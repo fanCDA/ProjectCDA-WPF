@@ -10,7 +10,9 @@ namespace ProjectCDA.Data
             RightPage = new SinglePage();
         }
 
-        public String ID { get; set; }
+        public int ID { get; set; }
+        public Boolean hasNumbers { get; set; }
+        public Boolean hasHeaderField { get; set; }
         public SinglePage LeftPage { get; set; }
         public SinglePage RightPage { get; set; }
     }
