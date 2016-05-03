@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="ProjectCDA.UserControls.Templates.TwoPages.TwoPagesTemplateDefault"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:ProjectCDA.UserControls.Templates.TwoPages"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <sys:Double x:Key="ItemHeight">230</sys:Double>
+    </UserControl.Resources>
+
+    <Border Height="{StaticResource ItemHeight}" Margin="5" Background="LightGray" BorderBrush="Black" BorderThickness="1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" VerticalAlignment="Center" Margin="2" FontWeight="Bold">0</TextBlock>
+                <TextBlock Grid.Column="2" VerticalAlignment="Center" Margin="2" FontWeight="Bold">1</TextBlock>
+            </Grid>
+
+            <TextBox Grid.Row="1" VerticalAlignment="Center" Margin="2" />
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Border BorderBrush="Gray" BorderThickness="1">
+                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Margin="2" />
+                </Border>
+                <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1">
+                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Margin="2" />
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

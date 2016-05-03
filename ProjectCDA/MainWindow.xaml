@@ -6,8 +6,25 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:localData="clr-namespace:ProjectCDA.Data"
         xmlns:UserControls="clr-namespace:ProjectCDA.UserControls"
+        xmlns:TwoPageTemplates="clr-namespace:ProjectCDA.UserControls.Templates.TwoPages"
         mc:Ignorable="d"
         Title="MainWindow">
+
+    <Window.Resources>
+        <UserControls:TwoPagesTemplateSelector x:Key="TwoPagesTemplateSelector" />
+
+        <DataTemplate x:Key="TwoPagesTemplateDefault">
+            <TwoPageTemplates:TwoPagesTemplateDefault />
+        </DataTemplate>
+        
+        <DataTemplate x:Key="TwoPagesTemplateNoHeader">
+            <TwoPageTemplates:TwoPagesTemplateNoHeader />
+        </DataTemplate>
+        
+        <DataTemplate x:Key="TwoPagesTemplateJustLeftPage">
+            <TwoPageTemplates:TwoPagesTemplateJustLeftPage />
+        </DataTemplate>
+    </Window.Resources>
 
     <Window.DataContext>
         <localData:DataSource />
@@ -15,13 +32,7 @@
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
         <Border Background="LightGray" BorderBrush="Red" BorderThickness="1">
-            <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}">
-                
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <UserControls:TwoPagesTemplateControl />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
+            <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}" ItemTemplateSelector="{StaticResource TwoPagesTemplateSelector}">
                 
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>

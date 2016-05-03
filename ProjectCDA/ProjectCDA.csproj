@@ -55,9 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UserControls\Templates\TwoPages\TwoPagesTemplateDefault.xaml.cs">
+      <DependentUpon>TwoPagesTemplateDefault.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Templates\TwoPages\TwoPagesTemplateJustLeftPage.xaml.cs">
+      <DependentUpon>TwoPagesTemplateJustLeftPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Templates\TwoPages\TwoPagesTemplateNoHeader.xaml.cs">
+      <DependentUpon>TwoPagesTemplateNoHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TwoPagesTemplateControl.xaml.cs">
       <DependentUpon>TwoPagesTemplateControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TwoPagesTemplateSelector.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,6 +83,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\Templates\TwoPages\TwoPagesTemplateDefault.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Templates\TwoPages\TwoPagesTemplateJustLeftPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Templates\TwoPages\TwoPagesTemplateNoHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\TwoPagesTemplateControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
