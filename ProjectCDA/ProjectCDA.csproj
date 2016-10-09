@@ -59,6 +59,9 @@
     <Compile Include="UserControls\SinglePageControl.xaml.cs">
       <DependentUpon>SinglePageControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Templates\SinglePage\SinglePageTemplateDefault.xaml.cs">
+      <DependentUpon>SinglePageTemplateDefault.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Templates\TwoPages\TwoPagesTemplateDefault.xaml.cs">
       <DependentUpon>TwoPagesTemplateDefault.xaml</DependentUpon>
     </Compile>
@@ -68,6 +71,7 @@
     <Compile Include="UserControls\Templates\TwoPages\TwoPagesTemplateNoHeader.xaml.cs">
       <DependentUpon>TwoPagesTemplateNoHeader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SinglePageTemplateSelector.cs" />
     <Compile Include="UserControls\TwoPagesTemplateSelector.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +89,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControls\SinglePageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Templates\SinglePage\SinglePageTemplateDefault.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

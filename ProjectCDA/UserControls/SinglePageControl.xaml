@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:UserControls="clr-namespace:ProjectCDA.UserControls"
+             xmlns:SinglePageTemplates="clr-namespace:ProjectCDA.UserControls.Templates.SinglePage"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 
-    <Border BorderBrush="Gray" BorderThickness="1">
-        <ContentControl Content="{Binding}" />
-    </Border>
+    <UserControl.Resources>
+        <UserControls:SinglePageTemplateSelector x:Key="SinglePageTemplateSelector" />
+
+        <DataTemplate x:Key="SinglePageTemplateDefault">
+            <SinglePageTemplates:SinglePageTemplateDefault />
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <ContentControl Content="{Binding}" ContentTemplateSelector="{StaticResource SinglePageTemplateSelector}">
+    </ContentControl>
 </UserControl>
