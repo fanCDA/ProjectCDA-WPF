@@ -16,6 +16,5 @@
         </DataTemplate>
     </UserControl.Resources>
 
-    <ContentControl Content="{Binding}" ContentTemplateSelector="{StaticResource SinglePageTemplateSelector}">
-    </ContentControl>
+    <ContentControl Content="{Binding}" ContentTemplateSelector="{StaticResource SinglePageTemplateSelector}" />
 </UserControl>
