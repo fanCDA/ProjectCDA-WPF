@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:localData="clr-namespace:ProjectCDA.Data"
+             xmlns:UserControls="clr-namespace:ProjectCDA.UserControls"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
 
@@ -42,12 +43,8 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1">
-                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Margin="2" />
-                </Border>
-                <Border Grid.Column="1" BorderBrush="Gray" BorderThickness="1">
-                    <TextBox AcceptsReturn="True" TextWrapping="Wrap" Margin="2" />
-                </Border>
+                <UserControls:SinglePageControl Grid.Column="0" DataContext="{Binding LeftPage}" />
+                <UserControls:SinglePageControl Grid.Column="1" DataContext="{Binding RightPage}" />
             </Grid>
         </Grid>
     </Border>

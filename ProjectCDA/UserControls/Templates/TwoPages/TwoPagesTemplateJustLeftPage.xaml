@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:UserControls="clr-namespace:ProjectCDA.UserControls"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
 
@@ -18,9 +19,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="1">
-                <TextBox AcceptsReturn="True" TextWrapping="Wrap" Margin="2" />
-            </Border>
+            <UserControls:SinglePageControl Grid.Column="0" DataContext="{Binding LeftPage}" />
         </Grid>
     </Border>
 </UserControl>
