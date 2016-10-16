@@ -28,7 +28,6 @@
 
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Close"
-                        CanExecute="Cmd_CanExecute_Close"
                         Executed="Cmd_Executed_Close" />
     </Window.CommandBindings>
 
