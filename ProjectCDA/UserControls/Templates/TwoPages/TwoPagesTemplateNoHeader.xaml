@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:localData="clr-namespace:ProjectCDA.Data"
+             xmlns:Converters="clr-namespace:ProjectCDA.Converter"
              xmlns:UserControls="clr-namespace:ProjectCDA.UserControls"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
@@ -12,8 +12,8 @@
     <UserControl.Resources>
         <sys:Double x:Key="ItemHeight">230</sys:Double>
 
-        <localData:IDToLeftPageNumber x:Key="IDToLeftPageNumber" />
-        <localData:IDToRightPageNumber x:Key="IDToRightPageNumber" />
+        <Converters:LeftPageIDConverter x:Key="LeftPageIDConverter" />
+        <Converters:RightPageIDConverter x:Key="RightPageIDConverter" />
     </UserControl.Resources>
 
     <Border Height="{StaticResource ItemHeight}" Margin="5" Background="LightGray" BorderBrush="Black" BorderThickness="1">
@@ -33,8 +33,8 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Column="0" VerticalAlignment="Center" Margin="2" FontWeight="Bold" Text="{Binding ID, Converter={StaticResource IDToLeftPageNumber}}" />
-                <TextBlock Grid.Column="2" VerticalAlignment="Center" Margin="2" FontWeight="Bold" Text="{Binding ID, Converter={StaticResource IDToRightPageNumber}}" />
+                <TextBlock Grid.Column="0" VerticalAlignment="Center" Margin="2" FontWeight="Bold" Text="{Binding ID, Converter={StaticResource LeftPageIDConverter}}" />
+                <TextBlock Grid.Column="2" VerticalAlignment="Center" Margin="2" FontWeight="Bold" Text="{Binding ID, Converter={StaticResource RightPageIDConverter}}" />
             </Grid>
 
             <Grid Grid.Row="3">
