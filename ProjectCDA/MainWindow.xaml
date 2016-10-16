@@ -30,17 +30,31 @@
         <localData:DataSource />
     </Window.DataContext>
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-        <Border Background="LightGray" BorderBrush="Red" BorderThickness="1">
-            <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}" ItemTemplateSelector="{StaticResource TwoPagesTemplateSelector}">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" />
+                <MenuItem Header="_Open" />
+                <MenuItem Header="_Save" />
+                <MenuItem Header="_Save As" />
+                <Separator />
+                <MenuItem Header="_Exit" Click="Menu_ExitClick" />
+            </MenuItem>
+        </Menu>
+        <TextBox AcceptsReturn="True" />
+    
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <Border Background="LightGray" BorderBrush="Red" BorderThickness="1">
+                <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}" ItemTemplateSelector="{StaticResource TwoPagesTemplateSelector}">
                 
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Columns="8" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="8" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
                 
-            </ItemsControl>
-        </Border>
-    </ScrollViewer>
+                </ItemsControl>
+            </Border>
+        </ScrollViewer>
+    </DockPanel>
 </Window>

@@ -11,5 +11,10 @@ namespace ProjectCDA
         {
             InitializeComponent();
         }
+
+        private void Menu_ExitClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
