@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using ProjectCDA.Model;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace ProjectCDA.Data

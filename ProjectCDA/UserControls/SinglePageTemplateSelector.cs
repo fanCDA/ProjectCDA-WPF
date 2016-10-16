@@ -1,4 +1,4 @@
-﻿using ProjectCDA.Data;
+﻿using ProjectCDA.Model;
 using System.Windows;
 using System.Windows.Controls;
 

@@ -82,8 +82,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Data\DataSource.cs" />
-    <Compile Include="Data\SinglePage.cs" />
-    <Compile Include="Data\TwoPages.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -136,7 +134,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectCDA.Model\ProjectCDA.Model.csproj">
+      <Project>{12E32D97-0044-44D1-9E7F-61AF922F1CDF}</Project>
+      <Name>ProjectCDA.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ProjectCDA.Data
+namespace ProjectCDA.Model
 {
     public class SinglePage
     {

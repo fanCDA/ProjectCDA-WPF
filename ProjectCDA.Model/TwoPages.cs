@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ProjectCDA.Data
+namespace ProjectCDA.Model
 {
     public class TwoPages
     {
