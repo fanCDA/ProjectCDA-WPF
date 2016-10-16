@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 namespace ProjectCDA
 {
@@ -12,7 +13,13 @@ namespace ProjectCDA
             InitializeComponent();
         }
 
-        private void Menu_ExitClick(object sender, RoutedEventArgs e)
+
+        private void Cmd_CanExecute_Close(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void Cmd_Executed_Close(object sender, ExecutedRoutedEventArgs e)
         {
             this.Close();
         }
