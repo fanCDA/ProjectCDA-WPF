@@ -1,15 +1,15 @@
 ﻿<UserControl x:Class="ProjectCDA.UserControls.SinglePageControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:UserControls="clr-namespace:ProjectCDA.UserControls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:DataTemplates="clr-namespace:ProjectCDA.DataTemplates"
              xmlns:SinglePageTemplates="clr-namespace:ProjectCDA.UserControls.Templates.SinglePage"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
 
     <UserControl.Resources>
-        <UserControls:SinglePageTemplateSelector x:Key="SinglePageTemplateSelector" />
+        <DataTemplates:SinglePageTemplateSelector x:Key="SinglePageTemplateSelector" />
 
         <DataTemplate x:Key="SinglePageTemplateDefault">
             <SinglePageTemplates:SinglePageTemplateDefault />

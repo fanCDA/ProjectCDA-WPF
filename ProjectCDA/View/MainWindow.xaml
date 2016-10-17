@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:localData="clr-namespace:ProjectCDA.Data"
-        xmlns:UserControls="clr-namespace:ProjectCDA.UserControls"
+        xmlns:DataTemplates="clr-namespace:ProjectCDA.DataTemplates"
         xmlns:TwoPageTemplates="clr-namespace:ProjectCDA.UserControls.Templates.TwoPages"
         mc:Ignorable="d"
         Title="MainWindow">
 
     <Window.Resources>
-        <UserControls:TwoPagesTemplateSelector x:Key="TwoPagesTemplateSelector" />
+        <DataTemplates:TwoPagesTemplateSelector x:Key="TwoPagesTemplateSelector" />
 
         <DataTemplate x:Key="TwoPagesTemplateDefault">
             <TwoPageTemplates:TwoPagesTemplateDefault />

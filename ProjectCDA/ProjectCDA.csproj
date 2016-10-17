@@ -72,8 +72,8 @@
     <Compile Include="UserControls\Templates\TwoPages\TwoPagesTemplateNoHeader.xaml.cs">
       <DependentUpon>TwoPagesTemplateNoHeader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\SinglePageTemplateSelector.cs" />
-    <Compile Include="UserControls\TwoPagesTemplateSelector.cs" />
+    <Compile Include="DataTemplates\SinglePageTemplateSelector.cs" />
+    <Compile Include="DataTemplates\TwoPagesTemplateSelector.cs" />
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

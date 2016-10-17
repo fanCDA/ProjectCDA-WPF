@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace ProjectCDA.UserControls
+namespace ProjectCDA.DataTemplates
 {
     class TwoPagesTemplateSelector : DataTemplateSelector
     {
