@@ -57,11 +57,11 @@
     </ApplicationDefinition>
     <Compile Include="Converter\LeftPageIDConverter.cs" />
     <Compile Include="Converter\RightPageIDConverter.cs" />
-    <Compile Include="UserControls\SinglePageControl.xaml.cs">
-      <DependentUpon>SinglePageControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DataTemplates\SinglePageTemplateSelector.cs" />
     <Compile Include="DataTemplates\FacingPagesTemplateSelector.cs" />
+    <Compile Include="View\Page\SinglePageControl.xaml.cs">
+      <DependentUpon>SinglePageControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Templates\FacingPages\FacingPagesTemplateDefault.xaml.cs">
       <DependentUpon>FacingPagesTemplateDefault.xaml</DependentUpon>
     </Compile>
@@ -87,7 +87,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControls\SinglePageControl.xaml">
+    <Page Include="View\Page\SinglePageControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

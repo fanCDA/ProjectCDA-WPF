@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:UserControls="clr-namespace:ProjectCDA.UserControls"
+             xmlns:Pages="clr-namespace:ProjectCDA.View.Page"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
 
@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <UserControls:SinglePageControl Grid.Column="0" DataContext="{Binding LeftPage}" />
+            <Pages:SinglePageControl Grid.Column="0" DataContext="{Binding LeftPage}" />
         </Grid>
     </Border>
 </UserControl>

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace ProjectCDA.UserControls
+namespace ProjectCDA.View.Page
 {
     /// <summary>
     /// Interaction logic for SinglePageControl.xaml
