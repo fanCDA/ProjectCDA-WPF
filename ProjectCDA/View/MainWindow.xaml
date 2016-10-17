@@ -5,26 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:localData="clr-namespace:ProjectCDA.Data"
-        xmlns:DataTemplates="clr-namespace:ProjectCDA.DataTemplates"
-        xmlns:FacingPagesTemplates="clr-namespace:ProjectCDA.View.Templates.FacingPages"
+        xmlns:Pages="clr-namespace:ProjectCDA.View.Page"
         mc:Ignorable="d"
         Title="MainWindow">
-
-    <Window.Resources>
-        <DataTemplates:FacingPagesTemplateSelector x:Key="FacingPagesTemplateSelector" />
-
-        <DataTemplate x:Key="FacingPagesTemplateDefault">
-            <FacingPagesTemplates:FacingPagesTemplateDefault />
-        </DataTemplate>
-        
-        <DataTemplate x:Key="FacingPagesTemplateNoHeader">
-            <FacingPagesTemplates:FacingPagesTemplateNoHeader />
-        </DataTemplate>
-
-        <DataTemplate x:Key="FacingPagesTemplateJustLeftPage">
-            <FacingPagesTemplates:FacingPagesTemplateJustLeftPage />
-        </DataTemplate>
-    </Window.Resources>
 
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Close"
@@ -50,15 +33,7 @@
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
             <Border Background="LightGray" BorderBrush="Red" BorderThickness="1">
-                <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}" ItemTemplateSelector="{StaticResource FacingPagesTemplateSelector}">
-                    
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <UniformGrid Columns="8" />
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                
-                </ItemsControl>
+                <Pages:FacingPagesControl />
             </Border>
         </ScrollViewer>
     </DockPanel>
