@@ -47,11 +47,11 @@
             </MenuItem>
         </Menu>
         <TextBox AcceptsReturn="True" />
-    
+
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
             <Border Background="LightGray" BorderBrush="Red" BorderThickness="1">
                 <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding Schedule}" ItemTemplateSelector="{StaticResource TwoPagesTemplateSelector}">
-                
+                    
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <UniformGrid Columns="8" />
