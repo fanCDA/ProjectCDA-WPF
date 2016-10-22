@@ -8,7 +8,16 @@ namespace ProjectCDA.Converter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return 2 * (int)value + 1;
+            int ID = (int)value;
+            switch (ID)
+            {
+                case 0:
+                    return "I";
+                case 1:
+                    return "III";
+                default:
+                    return 2 * ID - 2;
+            }
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
