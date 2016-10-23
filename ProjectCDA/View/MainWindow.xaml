@@ -6,6 +6,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:Pages="clr-namespace:ProjectCDA.View.Page"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="MainWindow">
 
     <Window.CommandBindings>

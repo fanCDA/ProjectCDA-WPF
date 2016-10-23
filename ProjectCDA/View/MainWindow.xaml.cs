@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using ProjectCDA.ViewModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace ProjectCDA
@@ -11,6 +12,12 @@ namespace ProjectCDA
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainViewModel vm = (MainViewModel)DataContext;
+            vm.LoadData();
         }
 
 
