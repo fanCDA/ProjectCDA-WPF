@@ -55,7 +55,7 @@ namespace ProjectCDA.Data
             pages.hasHeaderField = false;
             TmpSchedule.Add(pages);
 
-            for (int i=3; i<30; i++)
+            for (int i=3; i<65; i++)
             {
                 pages = new TwoPages();
                 pages.ID = i;
