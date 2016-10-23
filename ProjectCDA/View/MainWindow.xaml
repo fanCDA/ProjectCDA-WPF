@@ -29,7 +29,6 @@
                 <MenuItem Header="_Exit" Command="ApplicationCommands.Close" />
             </MenuItem>
         </Menu>
-        <TextBox AcceptsReturn="True" />
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
             <Border Background="LightGray" BorderBrush="Red" BorderThickness="1">
