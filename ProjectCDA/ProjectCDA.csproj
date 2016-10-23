@@ -59,6 +59,7 @@
     <Compile Include="Converter\RightPageIDConverter.cs" />
     <Compile Include="DataTemplates\SinglePageTemplateSelector.cs" />
     <Compile Include="DataTemplates\FacingPagesTemplateSelector.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\Page\FacingPagesControl.xaml.cs">
       <DependentUpon>FacingPagesControl.xaml</DependentUpon>
     </Compile>
@@ -85,7 +86,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data\DataSource.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -143,6 +143,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProjectCDA.DAL\ProjectCDA.DAL.csproj">
+      <Project>{F504FFF3-3F06-44AE-A73B-CAF6A19F13A5}</Project>
+      <Name>ProjectCDA.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProjectCDA.Model\ProjectCDA.Model.csproj">
       <Project>{12E32D97-0044-44D1-9E7F-61AF922F1CDF}</Project>
       <Name>ProjectCDA.Model</Name>
