@@ -12,7 +12,7 @@ namespace ProjectCDA.ViewModel
         public MainViewModel(IDataService dataService)
         {
             _dataService = dataService;
-            Schedule = new ObservableCollection<TwoPages>();
+            Schedule = new ObservableCollection<FacingPages>();
         }
 
         public MainViewModel()
@@ -34,7 +34,7 @@ namespace ProjectCDA.ViewModel
             }
         }
 
-        public ObservableCollection<TwoPages> Schedule
+        public ObservableCollection<FacingPages> Schedule
         {
             get;
             private set;

@@ -2,9 +2,9 @@
 
 namespace ProjectCDA.Model
 {
-    public class TwoPages
+    public class FacingPages
     {
-        public TwoPages()
+        public FacingPages()
         {
             LeftPage = new SinglePage();
             RightPage = new SinglePage();

@@ -5,6 +5,6 @@ namespace ProjectCDA.DAL
 {
     public interface IDataService
     {
-        IEnumerable<TwoPages> GetData();
+        IEnumerable<FacingPages> GetData();
     }
 }

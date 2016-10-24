@@ -6,23 +6,23 @@ namespace ProjectCDA.DAL
 {
     public class DataService : IDataService
     {
-        public IEnumerable<TwoPages> GetData()
+        public IEnumerable<FacingPages> GetData()
         {
-            ObservableCollection<TwoPages> gridData = new ObservableCollection<TwoPages>();
+            ObservableCollection<FacingPages> gridData = new ObservableCollection<FacingPages>();
 
-            TwoPages pages = new TwoPages();
+            FacingPages pages = new FacingPages();
             pages.ID = 0;
             pages.hasNumbers = true;
             pages.hasHeaderField = true;
             gridData.Add(pages);
 
-            pages = new TwoPages();
+            pages = new FacingPages();
             pages.ID = 1;
             pages.hasNumbers = true;
             pages.hasHeaderField = false;
             gridData.Add(pages);
 
-            pages = new TwoPages();
+            pages = new FacingPages();
             pages.ID = 2;
             pages.hasNumbers = false;
             pages.hasHeaderField = false;
@@ -30,7 +30,7 @@ namespace ProjectCDA.DAL
 
             for (int i = 3; i < 65; i++)
             {
-                pages = new TwoPages();
+                pages = new FacingPages();
                 pages.ID = i;
                 pages.hasNumbers = true;
                 pages.hasHeaderField = true;

@@ -8,7 +8,7 @@ namespace ProjectCDA.DataTemplates
     {
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
-            TwoPages twoPages = item as TwoPages;
+            FacingPages twoPages = item as FacingPages;
             FrameworkElement element = container as FrameworkElement;
 
             if (twoPages == null || element == null)
