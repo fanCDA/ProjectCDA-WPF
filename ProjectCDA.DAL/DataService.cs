@@ -9,6 +9,11 @@ namespace ProjectCDA.DAL
     {
         public IEnumerable<FacingPages> GetData()
         {
+            return GetMockData();
+        }
+
+        public IEnumerable<FacingPages> GetMockData()
+        {
             ObservableCollection<FacingPages> gridData = new ObservableCollection<FacingPages>();
 
             FacingPages pages = new FacingPages();
