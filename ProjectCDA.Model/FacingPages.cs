@@ -11,8 +11,7 @@ namespace ProjectCDA.Model
         }
 
         public int ID { get; set; }
-        public Boolean hasNumbers { get; set; }
-        public Boolean hasHeaderField { get; set; }
+        public int Type { get; set; }
         public SinglePage LeftPage { get; set; }
         public SinglePage RightPage { get; set; }
     }

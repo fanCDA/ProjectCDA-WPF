@@ -1,4 +1,5 @@
 ﻿using ProjectCDA.Model;
+using ProjectCDA.Model.Constants;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -12,28 +13,24 @@ namespace ProjectCDA.DAL
 
             FacingPages pages = new FacingPages();
             pages.ID = 0;
-            pages.hasNumbers = true;
-            pages.hasHeaderField = true;
+            pages.Type = FacingPagesTypes.DEFAULT;
             gridData.Add(pages);
 
             pages = new FacingPages();
             pages.ID = 1;
-            pages.hasNumbers = true;
-            pages.hasHeaderField = false;
+            pages.Type = FacingPagesTypes.NO_HEADER;
             gridData.Add(pages);
 
             pages = new FacingPages();
             pages.ID = 2;
-            pages.hasNumbers = false;
-            pages.hasHeaderField = false;
+            pages.Type = FacingPagesTypes.SINGLE_PAGE;
             gridData.Add(pages);
 
             for (int i = 3; i < 65; i++)
             {
                 pages = new FacingPages();
                 pages.ID = i;
-                pages.hasNumbers = true;
-                pages.hasHeaderField = true;
+                pages.Type = FacingPagesTypes.DEFAULT;
                 gridData.Add(pages);
             }
 

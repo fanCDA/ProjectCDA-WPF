@@ -1,4 +1,5 @@
 ﻿using ProjectCDA.Model;
+using ProjectCDA.Model.Constants;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -8,32 +9,32 @@ namespace ProjectCDA.DataTemplates
     {
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
-            FacingPages twoPages = item as FacingPages;
+            FacingPages facingPages = item as FacingPages;
             FrameworkElement element = container as FrameworkElement;
 
-            if (twoPages == null || element == null)
+            if (facingPages == null || element == null)
                 return null;
 
-            if(twoPages.hasNumbers)
+            switch (facingPages.Type)
             {
-                if(twoPages.hasHeaderField)
-                {
+                case FacingPagesTypes.DEFAULT:
                     // We have numbers on top and header.
                     // Assuming we have both left and right single pages.
                     return element.FindResource("FacingPagesTemplateDefault") as DataTemplate;
-                }
-                else
-                {
+
+                case FacingPagesTypes.NO_HEADER:
                     // We have just the numbers on top.
                     // Assuming we have both left and right single pages.
                     return element.FindResource("FacingPagesTemplateNoHeader") as DataTemplate;
-                }
-            }
-            else
-            {
-                // No numbers on top and no header.
-                // Assuming we have just left page.
-                return element.FindResource("FacingPagesTemplateJustLeftPage") as DataTemplate;
+
+                case FacingPagesTypes.SINGLE_PAGE:
+                    // We have numbers on top and header.
+                    // Assuming we have both left and right single pages.
+                    return element.FindResource("FacingPagesTemplateJustLeftPage") as DataTemplate;
+
+                default:
+                    // In case we have Type not handled above use default one...
+                    return element.FindResource("FacingPagesTemplateDefault") as DataTemplate;
             }
         }
     }
