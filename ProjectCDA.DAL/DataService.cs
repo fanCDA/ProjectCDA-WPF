@@ -1,7 +1,9 @@
-﻿using ProjectCDA.Model;
+﻿using Newtonsoft.Json;
+using ProjectCDA.Model;
 using ProjectCDA.Model.Constants;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 
 namespace ProjectCDA.DAL
 {
@@ -9,7 +11,8 @@ namespace ProjectCDA.DAL
     {
         public IEnumerable<FacingPages> GetData()
         {
-            return GetMockData();
+            return GetDataFromFile();
+            //return GetMockData();
         }
 
         public IEnumerable<FacingPages> GetMockData()
@@ -40,6 +43,14 @@ namespace ProjectCDA.DAL
             }
 
             return gridData;
+        }
+
+        public IEnumerable<FacingPages> GetDataFromFile()
+        {
+            string tmpDataFile = System.AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Data\\tmpDdata.json";
+            string jsonTxt = File.ReadAllText(tmpDataFile);
+            GridObjectsList result = JsonConvert.DeserializeObject<GridObjectsList>(jsonTxt);
+            return result.Data;
         }
     }
 }
