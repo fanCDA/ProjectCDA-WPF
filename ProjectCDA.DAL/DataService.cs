@@ -51,6 +51,19 @@ namespace ProjectCDA.DAL
             string jsonTxt = File.ReadAllText(tmpDataFile);
             GridObjectsList result = JsonConvert.DeserializeObject<GridObjectsList>(jsonTxt);
             return result.Data;
+
+        public bool SaveData(ObservableCollection<FacingPages> data)
+        {
+            string tmpDataFile = System.AppDomain.CurrentDomain.BaseDirectory + "..\\..\\Data\\tmpDdata.json";
+
+            var jsonText = JsonConvert.SerializeObject(
+                                                            new { GridObjects = data },
+                                                            Formatting.Indented,
+                                                            new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }
+                                                       );
+            File.WriteAllText(tmpDataFile, jsonText);
+
+            return false;
         }
     }
 }

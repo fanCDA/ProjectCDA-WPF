@@ -21,6 +21,12 @@ namespace ProjectCDA
         }
 
 
+        private void Cmd_Executed_Save(object sender, ExecutedRoutedEventArgs e)
+        {
+            MainViewModel vm = (MainViewModel)DataContext;
+            vm.SavedData();
+        }
+
         private void Cmd_Executed_Close(object sender, ExecutedRoutedEventArgs e)
         {
             this.Close();

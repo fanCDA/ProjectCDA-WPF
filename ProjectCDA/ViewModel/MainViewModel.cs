@@ -34,6 +34,11 @@ namespace ProjectCDA.ViewModel
             }
         }
 
+        internal void SavedData()
+        {
+            _dataService.SaveData(Schedule);
+        }
+
         public ObservableCollection<FacingPages> Schedule
         {
             get;
