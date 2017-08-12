@@ -2,7 +2,8 @@
   "GridObjects": [
     {
       "ID": 0,
-      "Type": 0
+      "Type": 0,
+      "Header": "Test header"
     },
     {
       "ID": 1,

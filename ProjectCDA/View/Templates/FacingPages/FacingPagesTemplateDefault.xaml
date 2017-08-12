@@ -38,7 +38,7 @@
                 <TextBlock Grid.Column="2" VerticalAlignment="Center" Margin="2" FontWeight="Bold" Text="{Binding ID, Converter={StaticResource RightPageIDConverter}}" />
             </Grid>
 
-            <TextBox Grid.Row="1" VerticalAlignment="Center" Margin="2" />
+            <TextBox Grid.Row="1" VerticalAlignment="Center" Margin="2" Text="{Binding Header}" />
 
             <Grid Grid.Row="3">
                 <Grid.ColumnDefinitions>
