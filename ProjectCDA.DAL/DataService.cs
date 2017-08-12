@@ -51,6 +51,7 @@ namespace ProjectCDA.DAL
             string jsonTxt = File.ReadAllText(tmpDataFile);
             GridObjectsList result = JsonConvert.DeserializeObject<GridObjectsList>(jsonTxt);
             return result.Data;
+        }
 
         public bool SaveData(ObservableCollection<FacingPages> data)
         {
