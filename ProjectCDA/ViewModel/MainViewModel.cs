@@ -7,9 +7,9 @@ namespace ProjectCDA.ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        private readonly IDataService _dataService;
+        private readonly DataService _dataService;
 
-        public MainViewModel(IDataService dataService)
+        public MainViewModel(DataService dataService)
         {
             _dataService = dataService;
             Schedule = new ObservableCollection<FacingPages>();

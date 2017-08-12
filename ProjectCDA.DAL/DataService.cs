@@ -7,7 +7,7 @@ using System.IO;
 
 namespace ProjectCDA.DAL
 {
-    public class DataService : IDataService
+    public class DataService
     {
         public IEnumerable<FacingPages> GetData()
         {
