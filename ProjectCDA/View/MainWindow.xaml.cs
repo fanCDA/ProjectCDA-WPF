@@ -17,7 +17,7 @@ namespace ProjectCDA
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             MainViewModel vm = (MainViewModel)DataContext;
-            vm.LoadData();
+            vm.LoadStartingData();
         }
 
 

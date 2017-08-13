@@ -9,13 +9,7 @@ namespace ProjectCDA.DAL
 {
     public class DataService
     {
-        public IEnumerable<FacingPages> GetData()
-        {
-            return GetDataFromFile();
-            //return GetMockData();
-        }
-
-        public IEnumerable<FacingPages> GetMockData()
+        public IEnumerable<FacingPages> GetStartingData()
         {
             ObservableCollection<FacingPages> gridData = new ObservableCollection<FacingPages>();
 
@@ -43,6 +37,11 @@ namespace ProjectCDA.DAL
             }
 
             return gridData;
+        }
+
+        public IEnumerable<FacingPages> GetData()
+        {
+            return GetDataFromFile();
         }
 
         public IEnumerable<FacingPages> GetDataFromFile()

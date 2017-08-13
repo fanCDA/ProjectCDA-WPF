@@ -1,5 +1,6 @@
 ﻿using ProjectCDA.DAL;
 using ProjectCDA.Model;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
@@ -22,11 +23,19 @@ namespace ProjectCDA.ViewModel
         }
 
 
+        public void LoadStartingData()
+        {
+            ClearAndFillSchedule(_dataService.GetStartingData());
+        }
+
         public void LoadData()
         {
-            Schedule.Clear();
+            ClearAndFillSchedule(_dataService.GetData());
+        }
 
-            var facingPages = _dataService.GetData();
+        private void ClearAndFillSchedule(IEnumerable<FacingPages> facingPages)
+        {
+            Schedule.Clear();
 
             foreach (var facingPage in facingPages)
             {
