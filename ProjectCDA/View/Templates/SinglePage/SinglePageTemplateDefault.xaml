@@ -7,6 +7,27 @@
              d:DesignHeight="300" d:DesignWidth="300">
 
     <Border Margin="1" Background="LightGray" BorderBrush="Gray" BorderThickness="1">
-        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Margin="2" />
+        <TextBox
+            AcceptsReturn="True" TextWrapping="Wrap" Margin="2"
+            ContextMenu="{x:Null}"
+            
+            PreviewMouseLeftButtonDown="TextBox_PreviewMouseLeftButtonDown"
+            PreviewMouseRightButtonDown="TextBox_PreviewMouseRightButtonDown"
+            PreviewMouseDown="TextBox_PreviewMouseDown"
+            
+            />
     </Border>
+
+    <!-- AllowDrop="True" PreviewDragEnter="TextBox_PreviewDragEnter" PreviewDrop="TextBox_PreviewDrop" -->
+    <!-- PreviewMouseRightButtonDown="TextBox_PreviewMouseRightButtonDown"
+         MouseRightButtonDown="TextBox_MouseRightButtonDown"
+         PreviewMouseLeftButtonDown="TextBox_PreviewMouseRightButtonDown" -->
+
+    <!-- MouseMove="TextBox_MouseMove"
+            GiveFeedback="TextBox_GiveFeedback"
+            
+            DragEnter="TextBox_DragEnter"
+            DragLeave="TextBox_DragLeave"
+            DragOver="TextBox_DragOver"
+            Drop="TextBox_Drop" -->
 </UserControl>
