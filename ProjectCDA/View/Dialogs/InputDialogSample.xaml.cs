@@ -25,5 +25,10 @@ namespace ProjectCDA.View.Dialogs
         {
             this.DialogResult = true;
         }
+
+        public int? Value
+        {
+            get { return intUpDown.Value; }
+        }
     }
 }

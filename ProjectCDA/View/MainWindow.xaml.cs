@@ -1,5 +1,6 @@
 ﻿using ProjectCDA.View.Dialogs;
 using ProjectCDA.ViewModel;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 
@@ -25,7 +26,10 @@ namespace ProjectCDA
         private void Cmd_Executed_New(object sender, ExecutedRoutedEventArgs e)
         {
             InputDialogSample inputDialog = new InputDialogSample();
-            inputDialog.ShowDialog();
+            if (inputDialog.ShowDialog() == true)
+            {
+                Debug.Print("Value: " + inputDialog.Value);
+            }
         }
 
         private void Cmd_Executed_Save(object sender, ExecutedRoutedEventArgs e)
