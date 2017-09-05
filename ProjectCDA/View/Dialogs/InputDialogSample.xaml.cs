@@ -20,5 +20,10 @@ namespace ProjectCDA.View.Dialogs
         {
             intUpDown.Value = intUpDown.Minimum;
         }
+
+        private void BtnDialogOk_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = true;
+        }
     }
 }
