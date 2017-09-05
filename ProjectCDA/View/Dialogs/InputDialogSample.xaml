@@ -1,10 +1,27 @@
 ﻿<Window x:Class="ProjectCDA.View.Dialogs.InputDialogSample"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         Title="Setting" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
-    
-    <WrapPanel HorizontalAlignment="Center">
-        <Button IsDefault="True" MinWidth="60">_Ok</Button>
-        <Button IsCancel="True" MinWidth="60">_Cancel</Button>
-    </WrapPanel>
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <xctk:IntegerUpDown Name="intUpDown" MinWidth="100" Value="129" Minimum="7" Maximum="400" />
+        <WrapPanel Grid.Column="1" Margin="10,0,0,0">
+            <Button Click="BtnDefault_Click" MinWidth="60" Margin="0,0,10,0">_Default</Button>
+            <Button Click="BtnMin_Click"  MinWidth="60">_Minimally</Button>
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,15,0,0">
+            <Button IsDefault="True" MinWidth="60" Margin="0,0,10,0">_Ok</Button>
+            <Button IsCancel="True" MinWidth="60">_Cancel</Button>
+        </WrapPanel>
+    </Grid>
 </Window>
