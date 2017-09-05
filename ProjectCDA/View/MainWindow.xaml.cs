@@ -1,4 +1,5 @@
-﻿using ProjectCDA.ViewModel;
+﻿using ProjectCDA.View.Dialogs;
+using ProjectCDA.ViewModel;
 using System.Windows;
 using System.Windows.Input;
 
@@ -20,6 +21,12 @@ namespace ProjectCDA
             vm.LoadStartingData();
         }
 
+
+        private void Cmd_Executed_New(object sender, ExecutedRoutedEventArgs e)
+        {
+            InputDialogSample inputDialog = new InputDialogSample();
+            inputDialog.ShowDialog();
+        }
 
         private void Cmd_Executed_Save(object sender, ExecutedRoutedEventArgs e)
         {

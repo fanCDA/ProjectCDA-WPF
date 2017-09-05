@@ -1,0 +1,10 @@
+﻿<Window x:Class="ProjectCDA.View.Dialogs.InputDialogSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Setting" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    
+    <WrapPanel HorizontalAlignment="Center">
+        <Button IsDefault="True" MinWidth="60">_Ok</Button>
+        <Button IsCancel="True" MinWidth="60">_Cancel</Button>
+    </WrapPanel>
+</Window>
