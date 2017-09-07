@@ -11,14 +11,16 @@ namespace ProjectCDA
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainViewModel vm;
+
         public MainWindow()
         {
             InitializeComponent();
+            vm = (MainViewModel)DataContext;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            MainViewModel vm = (MainViewModel)DataContext;
             vm.LoadStartingData();
         }
 
@@ -28,13 +30,13 @@ namespace ProjectCDA
             InputDialogSample inputDialog = new InputDialogSample();
             if (inputDialog.ShowDialog() == true)
             {
-                Debug.Print("Value: " + inputDialog.Value);
+                // Debug.Print("Value: " + inputDialog.Value);
+                vm.LoadBrandNewData(inputDialog.Value);
             }
         }
 
         private void Cmd_Executed_Save(object sender, ExecutedRoutedEventArgs e)
         {
-            MainViewModel vm = (MainViewModel)DataContext;
             vm.SavedData();
         }
 

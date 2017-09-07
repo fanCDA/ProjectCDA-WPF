@@ -11,6 +11,11 @@ namespace ProjectCDA.DAL
     {
         public IEnumerable<FacingPages> GetStartingData()
         {
+            return GetSpecificAmountOfData(5);
+        }
+
+        public IEnumerable<FacingPages> GetSpecificAmountOfData(int amount)
+        {
             ObservableCollection<FacingPages> gridData = new ObservableCollection<FacingPages>();
 
             FacingPages pages = new FacingPages();
@@ -28,7 +33,10 @@ namespace ProjectCDA.DAL
             pages.Type = FacingPagesTypes.SINGLE_PAGE;
             gridData.Add(pages);
 
-            for (int i = 3; i < 65; i++)
+            // Do some magic calculations, because we want whole pages and we already have 3
+            amount = (int)((amount + 4) * 0.5);
+
+            for (int i = 3; i < amount; i++)
             {
                 pages = new FacingPages();
                 pages.ID = i;

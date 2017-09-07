@@ -28,6 +28,11 @@ namespace ProjectCDA.ViewModel
             ClearAndFillSchedule(_dataService.GetStartingData());
         }
 
+        public void LoadBrandNewData(int amount)
+        {
+            ClearAndFillSchedule(_dataService.GetSpecificAmountOfData(amount));
+        }
+
         public void LoadData()
         {
             ClearAndFillSchedule(_dataService.GetData());
