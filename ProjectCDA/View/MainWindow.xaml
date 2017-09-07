@@ -10,6 +10,8 @@
         Title="MainWindow">
 
     <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New"
+                        Executed="Cmd_Executed_New" />
         <CommandBinding Command="ApplicationCommands.Close"
                         Executed="Cmd_Executed_Close" />
         <CommandBinding Command="ApplicationCommands.Save"
@@ -23,7 +25,7 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
-                <MenuItem Header="_New" />
+                <MenuItem Header="_New" Command="ApplicationCommands.New" />
                 <MenuItem Header="_Open" />
                 <MenuItem Header="_Save" Command="ApplicationCommands.Save" />
                 <MenuItem Header="_Save As" />
