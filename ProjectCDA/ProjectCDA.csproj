@@ -78,8 +78,8 @@
     <Compile Include="DataTemplates\SinglePageTemplateSelector.cs" />
     <Compile Include="DataTemplates\FacingPagesTemplateSelector.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="View\Dialogs\InputDialogSample.xaml.cs">
-      <DependentUpon>InputDialogSample.xaml</DependentUpon>
+    <Compile Include="View\Dialogs\NumberPickerDialog.xaml.cs">
+      <DependentUpon>NumberPickerDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Page\FacingPagesControl.xaml.cs">
       <DependentUpon>FacingPagesControl.xaml</DependentUpon>
@@ -99,7 +99,7 @@
     <Compile Include="View\Templates\SinglePage\SinglePageTemplateDefault.xaml.cs">
       <DependentUpon>SinglePageTemplateDefault.xaml</DependentUpon>
     </Compile>
-    <Page Include="View\Dialogs\InputDialogSample.xaml">
+    <Page Include="View\Dialogs\NumberPickerDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

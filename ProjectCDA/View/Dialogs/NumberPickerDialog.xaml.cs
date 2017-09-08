@@ -1,12 +1,12 @@
-using System.Windows;
+﻿using System.Windows;
 
 namespace ProjectCDA.View.Dialogs
 {
-    public partial class InputDialogSample : Window
+    public partial class NumberPickerDialog : Window
     {
         private static int DEFAULT_PAGE_NUMBER = 129;
 
-        public InputDialogSample()
+        public NumberPickerDialog()
         {
             InitializeComponent();
         }

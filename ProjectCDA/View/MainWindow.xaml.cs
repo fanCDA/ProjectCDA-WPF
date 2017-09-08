@@ -27,7 +27,7 @@ namespace ProjectCDA
 
         private void Cmd_Executed_New(object sender, ExecutedRoutedEventArgs e)
         {
-            InputDialogSample inputDialog = new InputDialogSample();
+            NumberPickerDialog inputDialog = new NumberPickerDialog();
             if (inputDialog.ShowDialog() == true)
             {
                 // Debug.Print("Value: " + inputDialog.Value);
