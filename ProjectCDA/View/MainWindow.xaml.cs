@@ -1,4 +1,5 @@
-﻿using ProjectCDA.View.Dialogs;
+﻿using ProjectCDA.Constants;
+using ProjectCDA.View.Dialogs;
 using ProjectCDA.ViewModel;
 using System.Diagnostics;
 using System.Windows;
@@ -27,7 +28,7 @@ namespace ProjectCDA
 
         private void Cmd_Executed_New(object sender, ExecutedRoutedEventArgs e)
         {
-            NumberPickerDialog inputDialog = new NumberPickerDialog();
+            NumberPickerDialog inputDialog = new NumberPickerDialog(CDAConstants.DEFAULT_PAGE_NUM, CDAConstants.MIN_PAGE_NUM, CDAConstants.MAX_PAGE_NUM);
             if (inputDialog.ShowDialog() == true)
             {
                 // Debug.Print("Value: " + inputDialog.Value);

@@ -13,7 +13,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <xctk:IntegerUpDown Name="intUpDown" MinWidth="100" Value="129" Minimum="7" Maximum="400" />
+        <xctk:IntegerUpDown Name="intUpDown" MinWidth="100" />
         <WrapPanel Grid.Column="1" Margin="10,0,0,0">
             <Button Click="BtnDefault_Click" MinWidth="60" Margin="0,0,10,0">_Default</Button>
             <Button Click="BtnMin_Click"  MinWidth="60">_Minimally</Button>

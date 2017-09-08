@@ -4,16 +4,20 @@ namespace ProjectCDA.View.Dialogs
 {
     public partial class NumberPickerDialog : Window
     {
-        private static int DEFAULT_PAGE_NUMBER = 129;
+        private int _defaultVal;
 
-        public NumberPickerDialog()
+        public NumberPickerDialog(int defaultVal, int minVal, int maxVal)
         {
             InitializeComponent();
+
+            intUpDown.Value = _defaultVal = defaultVal;
+            intUpDown.Minimum = minVal;
+            intUpDown.Maximum = maxVal;
         }
 
         private void BtnDefault_Click(object sender, RoutedEventArgs e)
         {
-            intUpDown.Value = DEFAULT_PAGE_NUMBER;
+            intUpDown.Value = _defaultVal;
         }
 
         private void BtnMin_Click(object sender, RoutedEventArgs e)

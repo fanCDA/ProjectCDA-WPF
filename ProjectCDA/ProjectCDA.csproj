@@ -73,6 +73,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Constants\CDAConstants.cs" />
     <Compile Include="Converter\LeftPageIDConverter.cs" />
     <Compile Include="Converter\RightPageIDConverter.cs" />
     <Compile Include="DataTemplates\SinglePageTemplateSelector.cs" />
