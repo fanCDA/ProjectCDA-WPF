@@ -7,6 +7,10 @@
              d:DesignHeight="300" d:DesignWidth="300">
 
     <Border Margin="1" Background="LightGray" BorderBrush="Gray" BorderThickness="1">
-        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Margin="2" />
+        <TextBox AcceptsReturn="True" TextWrapping="Wrap" Margin="2"
+                 PreviewMouseRightButtonDown="TextBox_PreviewMouseRightButtonDown"
+                 Name="Tf1"
+                 PreviewDrop="Tf1_PreviewDrop"
+                 DragDrop.PreviewQueryContinueDrag="TextBox_PreviewQueryContinueDrag"/>
     </Border>
 </UserControl>
