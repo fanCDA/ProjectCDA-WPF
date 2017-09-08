@@ -53,11 +53,17 @@ namespace ProjectCDA.View.Templates.SinglePage
 
         private void Tf1_PreviewDrop(object sender, DragEventArgs e)
         {
-            var data = e.Data.GetData(DataFormats.Text);
+            // `sender` is a sender of the event, so it's destination TextBox
+            // `dragSource` is where DragEvent started
             var dragSource = e.Data.GetData("DragSource");
+            
+            if(dragSource!= null)
+            {
+                var data = e.Data.GetData(DataFormats.Text);
 
-            (dragSource as TextBox).Text = (sender as TextBox).Text;
-            (sender as TextBox).Text = String.Empty;
+                (dragSource as TextBox).Text = (sender as TextBox).Text;
+                (sender as TextBox).Text = String.Empty;
+            }
         }
     }
 }
